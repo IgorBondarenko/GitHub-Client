@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GitHub Client</string>
+    <string name="search_hint">Введите имя пользователя</string>
+    <string name="snackbar_connection_fail">Ошибка соединения с сервером</string>
+    <string name="snackbar_try_again">Повторить</string>
+    <string name="toast_empty_query">Пожалуйста, введите поисковый запрос</string>
+    <string name="no_results">Ничего не найдено по запросу \'%1$s\'</string>
+</resources>

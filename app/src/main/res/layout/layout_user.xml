@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_margin="@dimen/list_item_margin"
+    android:background="?attr/selectableItemBackground">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_user_avatar"
+        android:layout_width="56dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/github_logo_icon"
+        android:layout_gravity="center|top"
+        android:transitionName="transition_avatar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="UserLogin"
+        android:fontFamily="sans-serif"
+        android:id="@+id/item_user_login"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:transitionName="transition_login"/>
+
+
+</LinearLayout>

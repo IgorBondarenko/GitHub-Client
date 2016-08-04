@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.UserActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:background="@android:color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:id="@+id/circular_reveal_background"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_bar_height"
+                android:background="@color/colorPrimary"
+                android:visibility="invisible"
+                android:fitsSystemWindows="true"
+                android:elevation="8dp">
+
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_avatar"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:src="@drawable/github_logo_icon"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:elevation="10dp"
+        android:transitionName="transition_avatar"
+
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:dependsOn="@+id/app_bar"
+        app:dependType="y"
+        app:dependTargetY="@dimen/app_bar_height_half_negative"
+        app:targetX="@dimen/app_bar_targetX"
+        app:targetY="@dimen/app_bar_targetY"
+        app:targetWidth="?attr/actionBarSize"
+        app:targetHeight="?attr/actionBarSize"
+
+        app:civ_fill_color="@android:color/white"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="10dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:text="UserLogin"
+        android:textColor="@android:color/white"
+        android:paddingLeft="?attr/actionBarSize"
+        android:paddingRight="?attr/actionBarSize"
+        android:transitionName="transition_login"
+
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:dependsOn="@+id/app_bar"
+        app:dependType="y"
+        app:dependTargetY="@dimen/app_bar_height_half_negative"
+        app:targetX="@dimen/app_bar_targetX"
+        app:targetY="@dimen/app_bar_targetY"
+        android:id="@+id/user_name"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <include layout="@layout/content_user" />
+
+</android.support.design.widget.CoordinatorLayout>

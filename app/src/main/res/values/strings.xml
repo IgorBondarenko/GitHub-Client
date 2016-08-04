@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GitHub Client</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_user">UserActivity</string>
+
+    <string name="search_hint">Type user name</string>
+    <string name="toast_empty_query">Please, enter search query</string>
+    <string name="no_results">There are no users matching \'%1$s\'</string>
+    <string name="snackbar_connection_fail">Connection fail</string>
+    <string name="snackbar_try_again">Try again</string>
+</resources>
