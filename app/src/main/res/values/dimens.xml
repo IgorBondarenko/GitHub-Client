@@ -4,6 +4,7 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="app_bar_height">216dp</dimen>
+    <dimen name="app_bar_height_half">108dp</dimen>
     <dimen name="app_bar_height_half_negative">-108dp</dimen>
     <dimen name="search_horizontal_margin">16dp</dimen>
     <dimen name="list_item_margin">8dp</dimen>

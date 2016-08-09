@@ -38,6 +38,7 @@ public class UserActivity extends AppCompatActivity {
 
     @BindView(R.id.repositories_rv) RecyclerView mRepositoriesRV;
     @BindView(R.id.user_name) TextView mUserNameTV;
+    @BindView(R.id.no_repositories_tv) TextView mNoRepositoriesTV;
     @BindView(R.id.user_avatar) CircleImageView mUserAvatarTV;
     @Inject AnimationController mAnimationController;
     @Inject GitHubAPI gitHubAPI;
@@ -82,6 +83,14 @@ public class UserActivity extends AppCompatActivity {
         observable
                 .subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread())
                 .doOnCompleted(() -> mRepositoryAdapter.notifyDataSetChanged())
+                .filter(repositories -> {
+                    if(repositories != null && repositories.size() > 0){
+                        return true;
+                    } else {
+                        mAnimationController.show(mNoRepositoriesTV);
+                    }
+                    return false;
+                })
                 .flatMap(repositories -> Observable.from(repositories))
                 .subscribe(
                         repository -> repositories.add(repository),

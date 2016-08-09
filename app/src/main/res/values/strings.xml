@@ -8,4 +8,5 @@
     <string name="no_results">There are no users matching \'%1$s\'</string>
     <string name="snackbar_connection_fail">Connection fail</string>
     <string name="snackbar_try_again">Try again</string>
+    <string name="no_repositories">There are no repositories</string>
 </resources>
